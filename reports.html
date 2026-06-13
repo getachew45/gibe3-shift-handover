@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GIBE III - Saved Handover Reports</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1> operation handover reports</h1>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>date</th>
+                <th>morning loading</th>
+                <th>evening loading</th>
+                <th>night loading</th>
+                <th>morning units</th>
+                <th>evening units</th>
+                <th>night units</th>
+                <th>SCADA</th>
+                <TH>No.of units under maintenance</TH>
+                <th>Stopped units</th>
+                <th>Bus-bar, overhead & outgoing lines</th>
+                <th></th>Stand by DG Condition</th>
+                <th>Plant DC system condition</th>
+                <th>Conditions of SCADA & MIMIC</th>
+                <th>PLC / Fixed phone communication</th>
+                <th>Availability of tools and utilities</th>
+                <th>Any remark required for next group</th>
+            </tr>
+        </thead>
+    </table>
+    <div class="container wide">
+        <h2>GIBE III Hydro Power Plant - Archived Shift Reports</h2>
+        <a href="onst firebaseConfig = {
+            apiKey: "AIzaSyA2sz07TqKrMIHl92VwLsW9T7G1ZaSVkSM",
+            authDomain: "gibe3operationhandover.firebaseapp.com",
+            projectId: "gibe3operationhandover",
+            storageBucket: "gibe3operationhandover.firebasestorage.app",
+            messagingSenderId: "588234679712",
+            appId: "1:588234679712:web:bc48d2298640261572f0c5",
+            measurementId: "G-CFCHKRJD75"
+          };
+          // Initialize Firebase
+          const app = initializeApp(firebaseConfig);
+          const db = getFirestore(app);" class="back-btn">← Back to Form</a>
+        
+        <div id="reportsContainer">
+            </div>
+    </div>
+
+    <script type="module" src="reports.js"></script>
+</body>
+</html>

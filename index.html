@@ -1,148 +1,150 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GIBE 3 Hydro Power Plant - Shift Handover</title>
-    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GIBE III Operation Shift Taking Over Form</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
- 
-    <div class="container">
-        <header>
-            <h1>GIBE III HYDRO POWER PLANT</h1>
-            <h2>Real-Time Operation Shift Taking-Over Form</h2>
-            <h3>Inspection Personnel / Shift Leader Briefing Report</h3>
-        </header>
- 
-        <form id="handoverForm">
-            <div class="date-section">
-                <label for="reportDate"><strong>Date:</strong></label>
-                <input type="date" id="reportDate" required>
-            </div>
- 
-            <div class="table-responsive">
-                <table>
-                    <thead>
-                        <tr>
-                            <th>S.No</th>
-                            <th>Description</th>
-                            <th>Morning @13:00</th>
-                            <th>Evening @20:00</th>
-                            <th>Night @06:00</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>1</td>
-                            <td>Total plant loading (MW)</td>
-                            <td><input type="text" name="m_loading"></td>
-                            <td><input type="text" name="e_loading"></td>
-                            <td><input type="text" name="n_loading"></td>
-                        </tr>
-                        <tr>
-                            <td>2</td>
-                            <td>No. of units in operation</td>
-                            <td><input type="number" name="m_ops"></td>
-                            <td><input type="number" name="e_ops"></td>
-                            <td><input type="number" name="n_ops"></td>
-                        </tr>
-                        <tr>
-                            <td>3</td>
-                            <td>No. of units under maintenance</td>
-                            <td><input type="number" name="m_maint"></td>
-                            <td><input type="number" name="e_maint"></td>
-                            <td><input type="number" name="n_maint"></td>
-                        </tr>
-                        <tr>
-                            <td>4</td>
-                            <td>Stopped units</td>
-                            <td><input type="text" name="m_stopped"></td>
-                            <td><input type="text" name="e_stopped"></td>
-                            <td><input type="text" name="n_stopped"></td>
-                        </tr>
-                        <tr>
-                            <td>5</td>
-                            <td>Bus-bar, overhead & outgoing lines</td>
-                            <td><input type="text" placeholder="Yes / Problem" name="m_bus"></td>
-                            <td><input type="text" placeholder="Yes / Problem" name="e_bus"></td>
-                            <td><input type="text" placeholder="Yes / Problem" name="n_bus"></td>
-                        </tr>
-                        <tr>
-                            <td>6</td>
-                            <td>Standby DG Condition</td>
-                            <td><input type="text" placeholder="Ready / Problem" name="m_dg"></td>
-                            <td><input type="text" placeholder="Ready / Problem" name="e_dg"></td>
-                            <td><input type="text" placeholder="Ready / Problem" name="n_dg"></td>
-                        </tr>
-                        <tr>
-                            <td>7</td>
-                            <td>Plant DC system condition</td>
-                            <td><input type="text" placeholder="OK / Problem" name="m_dc"></td>
-[6/9/2026 5:22 AM] Getachew Tenaw:                             <td><input type="text" placeholder="OK / Problem" name="e_dc"></td>
-                            <td><input type="text" placeholder="OK / Problem" name="n_dc"></td>
-                        </tr>
-                        <tr>
-                            <td>8</td>
-                            <td>Conditions of SCADA & MIMIC</td>
-                            <td><input type="text" placeholder="OK / Problem" name="m_scada"></td>
-                            <td><input type="text" placeholder="OK / Problem" name="e_scada"></td>
-                            <td><input type="text" placeholder="OK / Problem" name="n_scada"></td>
-                        </tr>
-                        <tr>
-                            <td>9</td>
-                            <td>PLC / Fixed phone communication</td>
-                            <td><input type="text" placeholder="OK / Problem" name="m_plc"></td>
-                            <td><input type="text" placeholder="OK / Problem" name="e_plc"></td>
-                            <td><input type="text" placeholder="OK / Problem" name="n_plc"></td>
-                        </tr>
-                        <tr>
-                            <td>10</td>
-                            <td>Availability of tools and utilities</td>
-                            <td><input type="text" name="m_tools"></td>
-                            <td><input type="text" name="e_tools"></td>
-                            <td><input type="text" name="n_tools"></td>
-                        </tr>
-                        <tr>
-                            <td>11</td>
-                            <td>Any remark for next group members</td>
-                            <td><textarea name="m_remark"></textarea></td>
-                            <td><textarea name="e_remark"></textarea></td>
-                            <td><textarea name="n_remark"></textarea></td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
- 
-            <div class="personnel-grid">
-                <div class="personnel-box">
-                    <h3>Attended By (Outgoing Shift)</h3>
-                    <label>Name:</label> <input type="text" id="attName" required>
-                    <label>Group/Shift:</label> <input type="text" id="attGroup">
-                    <label>Time:</label> <input type="time" id="attTime">
-                    <label>Date:</label> <input type="date" id="attDate">
-                </div>
- 
-                <div class="personnel-box">
-                    <h3>Addressed To (Incoming Shift)</h3>
-                    <label>Name:</label> <input type="text" id="addName" required>
-                    <label>Group/Shift:</label> <input type="text" id="addGroup">
-                    <label>Time:</label> <input type="time" id="addTime">
-                    <label>Date:</label> <input type="date" id="addDate">
-                </div>
-            </div>
- 
-            <button type="submit" class="btn-submit">Submit Report</button>
-        </form>
- 
-        <div id="reportSummary" class="summary-box hidden">
-            <h2>📊 Submitted Report Summary</h2>
-            <div id="summaryContent"></div>
-            <button onclick="window.print()" class="btn-print">🖨 Print / Save as PDF</button>
-        </div>
-    </div>
- 
-    <script src="<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
-<script src="app.js"></script>">
+    <div class="container">
+        <h2>GIBE III Hydro Power Plant Real Time Operation Shift Taking-Over Form</h2>
+        
+        <div class="date-section">
+            <label for="date"><strong>Date:</strong> </label>
+            <input type="date" id="date" required>
+        </div>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>S.No</th>
+                    <th>Description</th>
+                    <th>Morning @ 13:00</th>
+                    <th>Evening @ 20:00</th>
+                    <th>Night @ 06:00</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Total plant loading</td>
+                    <td><input type="text" id="loading_m"></td>
+                    <td><input type="text" id="loading_e"></td>
+                    <td><input type="text" id="loading_n"></td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>No.of units in operation</td>
+                    <td><input type="text" id="units_op_m"></td>
+                    <td><input type="text" id="units_op_e"></td>
+                    <td><input type="text" id="units_op_n"></td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>No.of units under maintenance</td>
+                    <td><input type="text" id="units_maint_m"></td>
+                    <td><input type="text" id="units_maint_e"></td>
+                    <td><input type="text" id="units_maint_n"></td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Stopped units</td>
+                    <td><input type="text" id="stopped_m"></td>
+                    <td><input type="text" id="stopped_e"></td>
+                    <td><input type="text" id="stopped_n"></td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>Bus-bar, overhead & outgoing lines</td>
+                    <td><input type="text" id="busbar_m" placeholder="Yes / Problem"></td>
+                    <td><input type="text" id="busbar_e" placeholder="Yes / Problem"></td>
+                    <td><input type="text" id="busbar_n" placeholder="Yes / Problem"></td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td>Stand by DG Condition</td>
+                    <td><input type="text" id="dg_m" placeholder="Ready / Problem"></td>
+                    <td><input type="text" id="dg_e" placeholder="Ready / Problem"></td>
+                    <td><input type="text" id="dg_n" placeholder="Ready / Problem"></td>
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td>Plant DC system condition</td>
+                    <td><input type="text" id="dc_m" placeholder="OK / Problem"></td>
+                    <td><input type="text" id="dc_e" placeholder="OK / Problem"></td>
+                    <td><input type="text" id="dc_n" placeholder="OK / Problem"></td>
+                </tr>
+                <tr>
+                    <td>8</td>
+                    <td>Conditions of SCADA & MIMIC</td>
+                    <td><input type="text" id="scada_m" placeholder="OK / Problem"></td>
+                    <td><input type="text" id="scada_e" placeholder="OK / Problem"></td>
+                    <td><input type="text" id="scada_n" placeholder="OK / Problem"></td>
+                </tr>
+                <tr>
+                    <td>9</td>
+                    <td>PLC / Fixed phone communication</td>
+                    <td><input type="text" id="plc_m" placeholder="OK / Problem"></td>
+                    <td><input type="text" id="plc_e" placeholder="OK / Problem"></td>
+                    <td><input type="text" id="plc_n" placeholder="OK / Problem"></td>
+                </tr>
+                <tr>
+                    <td>10</td>
+                    <td>Availability of tools and utilities</td>
+                    <td><textarea id="tools_m"></textarea></td>
+                    <td><textarea id="tools_e"></textarea></td>
+                    <td><textarea id="tools_n"></textarea></td>
+                </tr>
+                <tr>
+                    <td>11</td>
+                    <td>Any remark required for next group</td>
+                    <td><textarea id="remarks_m"></textarea></td>
+                    <td><textarea id="remarks_e"></textarea></td>
+                    <td><textarea id="remarks_n"></textarea></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="personnel-section">
+            <div class="personnel-box">
+                <h4>Morning Shift Personnel</h4>
+                <input type="text" id="attended_m" placeholder="Attended By (Name)">
+                <input type="text" id="group_m" placeholder="Group">
+                <input type="text" id="addressed_m" placeholder="Addressed To">
+            </div>
+            <div class="personnel-box">
+                <h4>Evening Shift Personnel</h4>
+                <input type="text" id="attended_e" placeholder="Attended By (Name)">
+                <input type="text" id="group_e" placeholder="Group">
+                <input type="text" id="addressed_e" placeholder="Addressed To">
+            </div>
+            <div class="personnel-box">
+                <h4>Night Shift Personnel</h4>
+                <input type="text" id="attended_n" placeholder="Attended By (Name)">
+                <input type="text" id="group_n" placeholder="Group">
+                <input type="text" id="addressed_n" placeholder="Addressed To">
+            </div>
+        </div>
+
+        <div class="btn-container">
+            <button id="submitBtn">Submit Report</button>
+            <a href="const firebaseConfig = {
+                apiKey: "AIzaSyA2sz07TqKrMIHl92VwLsW9T7G1ZaSVkSM",
+                authDomain: "gibe3operationhandover.firebaseapp.com",
+                projectId: "gibe3operationhandover",
+                storageBucket: "gibe3operationhandover.firebasestorage.app",
+                messagingSenderId: "588234679712",
+                appId: "1:588234679712:web:bc48d2298640261572f0c5",
+                measurementId: "G-CFCHKRJD75"
+              };
+              // Initialize Firebase
+              const app = initializeApp(firebaseConfig);
+              const db = getFirestore(app);" class="view-link">View Saved Reports</a>
+        </div>
+    </div>
+
+    <script type="module" src="import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
+    import { getFirestore, collection, addDoc } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";"></script>
 </body>
 </html>
