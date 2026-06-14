@@ -1,153 +1,106 @@
-:root {
-    --primary-color: #0056b3;
-    --secondary-color: #f8f9fa;
-    --border-color: #cccccc;
-    --text-color: #333333;
-}
-
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #eef2f7;
+    font-family: Arial, sans-serif;
+    background-color: #f4f6f9;
     margin: 0;
     padding: 20px;
-    color: var(--text-color);
 }
-
 .container {
-    max-width: 1100px;
+    max-width: 950px;
     margin: 0 auto;
-    background: #ffffff;
-    padding: 30px;
+    background: #fff;
+    padding: 25px;
     border-radius: 8px;
     box-shadow: 0 4px 15px rgba(0,0,0,0.1);
 }
-
-header {
-    text-align: center;
-    border-bottom: 3px solid var(--primary-color);
-    padding-bottom: 15px;
-    margin-bottom: 25px;
+.container.wide {
+    max-width: 1100px;
 }
-
-header h1 { margin: 0; color: var(--primary-color); font-size: 26px; }
-header h2 { margin: 5px 0; font-size: 18px; color: #555; }
-header h3 { margin: 5px 0; font-size: 16px; font-weight: normal; color: #777; }
-
+h2 {
+    text-align: center;
+    color: #1a365d;
+}
 .date-section {
     margin-bottom: 20px;
-    font-size: 18px;
+    font-size: 16px;
 }
 .date-section input {
     padding: 6px;
-    font-size: 16px;
+    font-size: 15px;
 }
-
-.table-responsive {
-    overflow-x: auto;
-}
-
 table {
     width: 100%;
     border-collapse: collapse;
     margin-bottom: 25px;
 }
-
 th, td {
-    border: 1px solid var(--border-color);
+    border: 1px solid #cbd5e1;
     padding: 10px;
     text-align: left;
 }
-
 th {
-    background-color: var(--primary-color);
+    background-color: #1e3a8a;
     color: white;
-    font-weight: 600;
 }
-
-tr:nth-child(even) {
-    background-color: var(--secondary-color);
-}
-
-input[type="text"], input[type="number"], input[type="date"], input[type="time"], textarea {
-    width: 90%;
-    padding: 8px;
-    border: 1px solid #bbb;
+input[type="text"], textarea {
+    width: 92%;
+    padding: 6px;
+    border: 1px solid #94a3b8;
     border-radius: 4px;
-    box-sizing: border-box;
 }
-
 textarea {
-    resize: vertical;
-    height: 60px;
+    height: 50px;
+    resize: none;
 }
-
-.personnel-grid {
+.personnel-section {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 15px;
     margin-bottom: 25px;
 }
-
 .personnel-box {
-    border: 1px solid var(--border-color);
+    background: #f8fafc;
     padding: 15px;
+    border: 1px solid #e2e8f0;
     border-radius: 6px;
-    background: #fafafa;
 }
-
-.personnel-box h3 {
+.personnel-box h4 {
     margin-top: 0;
-    color: var(--primary-color);
-    border-bottom: 1px solid #ddd;
-    padding-bottom: 5px;
+    color: #1e3a8a;
 }
-
-.personnel-box label {
-    display: inline-block;
-    width: 100px;
-    margin-top: 10px;
-    font-weight: bold;
-}
-
 .personnel-box input {
-    width: calc(100% - 110px);
-    margin-top: 8px;
+    margin-bottom: 8px;
+    width: 90%;
 }
-
-.btn-submit, .btn-print {
-    display: block;
-    width: 100%;
-    padding: 12px;
-    background: var(--primary-color);
+.btn-container {
+    text-align: center;
+}
+button {
+    background-color: #10b981;
     color: white;
     border: none;
-    border-radius: 5px;
-    font-size: 18px;
-    font-weight: bold;
+    padding: 12px 30px;
+    font-size: 16px;
     cursor: pointer;
-    transition: background 0.3s;
+    border-radius: 5px;
+    font-weight: bold;
 }
-
-.btn-submit:hover, .btn-print:hover {
-    background: #004085;
+button:hover {
+    background-color: #059669;
 }
-
-.summary-box {
-    margin-top: 30px;
+.view-link, .back-btn {
+    display: inline-block;
+    margin-left: 15px;
+    color: #1e3a8a;
+    text-decoration: none;
+    font-weight: bold;
+}
+.report-card {
+    background: #fff;
     padding: 20px;
-    background: #e2f0d9;
-    border: 2px dashed #385723;
     border-radius: 6px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    margin-bottom: 30px;
 }
-
-.hidden { display: none; }
-
-/* ስልክ ላይ ሲከፈት ቴብሉ እንዳይበላሽ ማስተካከያ (Mobile Responsive) */
-@media (max-width: 768px) {
-    .personnel-grid {
-        grid-template-columns: 1fr;
-    }
-    input[type="text"], input[type="number"] {
-        width: 100%;
-    }
+.meta-row {
+    background: #f1f5f9;
 }
